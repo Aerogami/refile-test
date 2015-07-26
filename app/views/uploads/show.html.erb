@@ -1,4 +1,26 @@
 <p id="notice"><%= notice %></p>
 
+<p>Each document is rendered in two rows.</p>
+<ol>
+  <li>The first row is the default, which results in a 404.</li>
+  <li>In the second row I'm setting the `host` option manually just to show that the image does exit: `attachment_url(... host: request.base_url)`.</li>
+</ol>
+
+<hr>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content Type</th>
+      <th>ID</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @upload.documents %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_upload_path(@upload) %> |
 <%= link_to 'Back', uploads_path %>

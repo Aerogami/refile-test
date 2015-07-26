@@ -1,5 +1,8 @@
 <h1>New Upload</h1>
 
+<p>Presign requests are going to S3 and not through the CDN because `host` is set to `requet.base_url`:</p>
+<p>`= f.attachment_field ... host: request.base_url`</p>
+
 <%= render 'form' %>
 
 <%= link_to 'Back', uploads_path %>

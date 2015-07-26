@@ -1,0 +1,12 @@
+<tr>
+  <td><%= document.file_filename %></td>
+  <td><%= document.file_content_type %></td>
+  <td><%= document.file_id %></td>
+  <td><%= attachment_image_tag document, :file, :fit, 100, 100 %></td>
+</tr>
+<tr>
+  <td><%= document.file_filename %></td>
+  <td><%= document.file_content_type %></td>
+  <td><%= document.file_id %></td>
+  <td><%= image_tag(attachment_url(document, :file, :fit, 100, 100, host: request.base_url)) %></td>
+</tr>
