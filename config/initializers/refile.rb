@@ -11,4 +11,4 @@ aws = {
 Refile.cache = Refile::S3.new(prefix: 'cache', **aws)
 Refile.store = Refile::S3.new(prefix: 'store', **aws)
 
-Refile.host = Rails.application.secrets.CLOUDFRONT_DISTRIBUTION
+Refile.host = '//d3j2pv3e3ss0vp.cloudfront.net'
