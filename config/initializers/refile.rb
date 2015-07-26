@@ -1,4 +1,5 @@
-require "refile/s3"
+require 'refile/s3'
+require 'yaml'
 
 aws = {
   access_key_id: Rails.application.secrets.AWS_KEY_ID,
